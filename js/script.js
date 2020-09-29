@@ -7,15 +7,14 @@ const number = document.querySelector('.num'),
 function counter() {
     let x = 0;
 
-    if (x <= 0) {
-        
-    }
 
     plus.addEventListener('click', () => {
         number.textContent = ++x;
     });
     minus.addEventListener('click', () => {
-        number.textContent = --x;
+        if (x >= 1) {
+            number.textContent = --x;
+        }
     });
 
 }
